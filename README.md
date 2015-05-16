@@ -4,11 +4,22 @@ This repository contains demos for understanding the **NodeJS**.
 
 Agenda: 
 
-1. What is NodeJS? Why NodeJS?
-2. Installing NodeJS!
-3. Hello World demo.
-4. How to run NodeJS Application?
-5. HTTP Server with NodeJS
+* What is NodeJS? Why NodeJS?
+* Installing NodeJS!
+* Hello World demo.
+* How to run NodeJS Application?
+* Module Pattern Introduction
+* Global Functions and Objects
+    * console
+    * setTimeout(cb, ms)
+    * clearTimeout(t)
+    * setInterval(cb, ms)
+    * clearInterval(t)
+* NPM
+* Node Internal Modules
+    * fs (file-system) (Sync and Async behaviour)
+* HTTP Server with NodeJS
+* Handling HTTP Request.
 
 References:
 
