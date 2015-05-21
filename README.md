@@ -6,7 +6,7 @@ Agenda:
 
 * What is NodeJS? Why NodeJS?
 * Installing NodeJS!
-* Hello World demo.
+* Hello World Demo.
 * How to run NodeJS Application?
 * Module Pattern Introduction
 * Global Functions and Objects
