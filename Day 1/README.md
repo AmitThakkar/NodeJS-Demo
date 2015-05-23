@@ -4,17 +4,12 @@
 * Installing NodeJS!
 * Hello World Demo.
 * How to run NodeJS Application?
-* Global Functions and Objects
-    * console
-    * setTimeout(cb, ms)
-    * clearTimeout(t)
-    * setInterval(cb, ms)
-    * clearInterval(t)
-* NPM
 * Node Internal Modules
     * fs (file-system) (Sync and Async behaviour)
-* HTTP Server with NodeJS
+    * http/https (HTTP Server with NodeJS)
 * Handling HTTP Request.
+
+> In browsers console.log logs messages on browser console, while in NodeJS console.log logs message in terminal/cmd, where NodeJS program is running.
 
 References:
 
