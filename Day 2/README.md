@@ -10,11 +10,5 @@
 * Command Line Arguments.
 * Command Line Environment Variables.
 * NPM
-* External Node Modules
+* External Node Modules(Package.json- npm init)
     * lodash
-* What is ExpressJS?
-* Why should we use ExpressJS?
-* 
-
-###Assignment:
-1. Add Environment Variable support with Express server.
