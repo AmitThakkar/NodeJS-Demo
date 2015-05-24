@@ -5,5 +5,9 @@
 * HTTP Server with ExpressJS
 * Middleware
 * Serve static/public content with ExpressJS
+* Add Support of AngularJS App.
+
+* Error Handling
+* Debugging
 * CommonJS (export-require) folder structure
 * Custom Modules
