@@ -6,8 +6,8 @@
 * Middleware
 * Serve static/public content with ExpressJS
 * Add Support of AngularJS App.
-
+* CommonJS module (require and export)
 * Error Handling
 * Debugging
-* CommonJS (export-require) folder structure
+* folder structure
 * Custom Modules
