@@ -5,7 +5,7 @@
     var express = require('express');
     var app = express();
     app.use(function (req, res, next) {
-        console.log("Request: ", req.url);
+        console.log("Request: ", req.originalUrl);
         next();
     });
     app.get('/', function (req, res) {

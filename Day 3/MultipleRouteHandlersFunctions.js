@@ -8,16 +8,19 @@
         console.log("Request: ", req.url);
         next();
     });
-    app.get('/', function (req, res, next) {
+    var route1Handler = function (req, res, next) {
         console.log("111");
         next();
-    }, function (req, res, next) {
+    };
+    var route2Handler = function (req, res, next) {
         console.log("222");
         next();
-    }, function (req, res) {
+    };
+    var route3Handler = function (req, res, next) {
         console.log("333");
         res.send("Hello World");
-    });
+    };
+    app.get('/', route1Handler, route2Handler, route3Handler);
     var server = app.listen(3000, function () {
         console.log('TODO app listening at http://localhost:' + server.address().port);
     });

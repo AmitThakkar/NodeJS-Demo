@@ -37,7 +37,6 @@
                         data = "This is me From DELETE Request";
                         break;
                 }
-                data = "This is Me!";
                 break;
             default :
                 data = "You lose in space";
