@@ -16,7 +16,7 @@
         console.log("222");
         next();
     };
-    var route3Handler = function (req, res, next) {
+    var route3Handler = function (req, res) {
         console.log("333");
         res.send("Hello World");
     };

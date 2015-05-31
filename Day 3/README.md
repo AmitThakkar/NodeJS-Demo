@@ -8,4 +8,5 @@
 * Serve static/public content with ExpressJS
 * Add Support of AngularJS App.
 * Multiple Route Handler
+* Multiple Route Handler Functions
 * Error Handling

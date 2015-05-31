@@ -8,8 +8,6 @@
         console.log("Request: ", req.url);
         next();
     });
-    app.use(express.static('public'));
-    app.use(express.static('node_modules'));
     app.get('/', function (req, res, next) {
         console.log("111");
         //next();
