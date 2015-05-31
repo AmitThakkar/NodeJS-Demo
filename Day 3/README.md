@@ -8,7 +8,3 @@
 * Add Support of AngularJS App.
 * Multiple Route Handler
 * Error Handling
-* CommonJS module (require and export)
-* Debugging
-* folder structure
-* Custom Modules
