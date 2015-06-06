@@ -3,7 +3,7 @@
  */
 (function () {
     module.exports = function (app) {
-        app.get('/', function (req, res) {
+        app.get('/hello', function (req, res) {
             res.send("Hello World");
         });
         app.get('/me', function (req, res) {
