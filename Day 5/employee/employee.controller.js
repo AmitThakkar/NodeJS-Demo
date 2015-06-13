@@ -18,6 +18,21 @@
             }
         });
     };
+    module.exports.remove = function (req, res) {
+        var id = req.params.id;
+        console.log(1111, id)
+        Employee.removeOneById(id, function (error, user) {
+            console.log(arguments)
+            if (error) {
+                winston.error(error);
+                res.status(500).json(error);
+            } else if (!user) {
+                res.status(404).send("No record found with " + id);
+            } else {
+                res.status(200).json(user);
+            }
+        });
+    };
     module.exports.save = function (req, res) {
         var newEmployeeDetails = req.body;
         winston.silly('Saving User: ', newEmployeeDetails);
@@ -33,5 +48,19 @@
                     res.status(200).json(user);
                 }
             });
+    };
+    module.exports.update = function (req, res) {
+        var updateEmployeeDetails = req.body;
+        winston.silly('Updating User: ', updateEmployeeDetails);
+        Employee.updateById(updateEmployeeDetails, function(error, isUpdated) {
+            if (error) {
+                winston.error(error);
+                res.status(500).json(error);
+            } else if (!isUpdated) {
+                res.status(404).send("No record found with " + id);
+            } else {
+                res.status(200).json("User Updated");
+            }
+        });
     };
 })(require, module);

@@ -11,5 +11,13 @@
     employeeSchema.static('findOneById', function (id, callback) {
         this.findOne({_id: id}, callback);
     });
+    employeeSchema.static('removeOneById', function (id, callback) {
+        this.remove({_id: id}, true, callback);
+    });
+    employeeSchema.static('updateById', function (updateEmployeeDetails, callback) {
+        var id = updateEmployeeDetails.id;
+        delete updateEmployeeDetails.id;
+        this.update({_id: id}, {$set: updateEmployeeDetails}, callback);
+    });
     module.exports = mongoose.model('Employee', employeeSchema);
 })(require, module);

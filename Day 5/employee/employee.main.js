@@ -7,7 +7,7 @@
         app.get('/employee/:id', EmployeeController.get);
         //app.get('/employee', EmployeeController.list);
         app.post('/employee', EmployeeController.save);
-        //app.put('/employee', EmployeeController.update);
-        //app.delete('/employee', EmployeeController.remove);
+        app.put('/employee', EmployeeController.update);
+        app.delete('/employee/:id', EmployeeController.remove);
     };
 })(module, require);
