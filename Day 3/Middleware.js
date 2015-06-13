@@ -9,10 +9,10 @@
         next();
     });
     app.get('/', function (req, res) {
-        res.send("Hello World");
+        res.status(200).send("Hello World");
     });
     app.get('/me', function (req, res) {
-        res.send("This is me");
+        res.status(200).send("This is me");
     });
     var server = app.listen(3000, function () {
         console.log('TODO app listening at http://localhost:' + server.address().port);

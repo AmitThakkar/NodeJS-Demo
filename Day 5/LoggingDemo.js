@@ -16,6 +16,7 @@
     winston.error('6th Level');
 
     var mongoURL = 'mongodb://localhost/test';
+    mongoose.connect(mongoURL);
     var db = mongoose.connection;
     db.on('error', function (error) {
         winston.error(error.message);
@@ -38,7 +39,7 @@
             if (error) {
                 winston.error(error);
             } else {
-                res.send("User saved:", user);
+                res.status(200).send("User saved:" + user);
             }
         });
     });

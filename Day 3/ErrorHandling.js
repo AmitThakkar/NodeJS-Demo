@@ -17,17 +17,17 @@
         next();
     }, function (req, res) {
         console.log("333");
-        res.send("Hello World");
+        res.status(200).send("Hello World");
     }, function (error, req, res, next) {
         console.log("444");
         //next();
         next(error);
     }, function (req, res, next) {
         console.log("555");
-        res.send("Hello World");
+        res.status(200).send("Hello World");
     }, function (error, req, res, next) {
         console.log("666");
-        res.send("Error Handled Hello World");
+        res.status(200).send("Error Handled Hello World");
     });
     var server = app.listen(3000, function () {
         console.log('TODO app listening at http://localhost:' + server.address().port);

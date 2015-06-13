@@ -31,7 +31,7 @@
             if (error) {
                 console.log('Error:', error);
             } else {
-                res.send("User saved:", user);
+                res.status(200).send("User saved:", user);
             }
         });
     });

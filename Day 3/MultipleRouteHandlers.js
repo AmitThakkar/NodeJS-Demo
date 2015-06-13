@@ -16,7 +16,7 @@
         next();
     }, function (req, res) {
         console.log("333");
-        res.send("Hello World");
+        res.status(200).send("Hello World");
     });
     var server = app.listen(3000, function () {
         console.log('TODO app listening at http://localhost:' + server.address().port);

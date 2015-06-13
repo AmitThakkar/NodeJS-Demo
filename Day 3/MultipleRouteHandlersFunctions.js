@@ -18,7 +18,7 @@
     };
     var route3Handler = function (req, res) {
         console.log("333");
-        res.send("Hello World");
+        res.status(200).send("Hello World");
     };
     app.get('/', route1Handler, route2Handler, route3Handler);
     var server = app.listen(3000, function () {
