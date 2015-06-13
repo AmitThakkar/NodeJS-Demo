@@ -18,6 +18,18 @@
             }
         });
     };
+    module.exports.list = function (req, res) {
+        Employee.find(function (error, users) {
+            if (error) {
+                winston.error(error);
+                res.status(500).json(error);
+            } else if (!users) {
+                res.status(404).send("No record found with " + id);
+            } else {
+                res.status(200).json(users);
+            }
+        });
+    };
     module.exports.remove = function (req, res) {
         var id = req.params.id;
         Employee.removeOneById(id, function (error, user) {
