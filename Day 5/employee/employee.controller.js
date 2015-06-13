@@ -20,9 +20,7 @@
     };
     module.exports.remove = function (req, res) {
         var id = req.params.id;
-        console.log(1111, id)
         Employee.removeOneById(id, function (error, user) {
-            console.log(arguments)
             if (error) {
                 winston.error(error);
                 res.status(500).json(error);

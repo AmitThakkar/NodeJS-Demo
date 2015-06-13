@@ -12,7 +12,7 @@
         this.findOne({_id: id}, callback);
     });
     employeeSchema.static('removeOneById', function (id, callback) {
-        this.remove({_id: id}, true, callback);
+        this.remove({_id: id}, callback);
     });
     employeeSchema.static('updateById', function (updateEmployeeDetails, callback) {
         var id = updateEmployeeDetails.id;
