@@ -7,13 +7,14 @@
     var mongoose = require('mongoose');
 
     // Connect with MongoDB server
-    mongoose.connect('mongodb://localhost/mongoTest');
+    var mongoURL = 'mongodb://localhost/test';
+    mongoose.connect(mongoURL);
     var db = mongoose.connection;
     db.on('error', function (error) {
         console.log('Error: ', error.message);
     });
     db.once('open', function () {
-        console.log('MongoDB connected!');
+        console.log('Connected with mongodb on ', mongoURL);
     });
 
     // Define Schema for Collection.
@@ -31,7 +32,7 @@
             if (error) {
                 console.log('Error:', error);
             } else {
-                res.status(200).send("User saved:", user);
+                res.status(200).send("User saved:" + user);
             }
         });
     });
