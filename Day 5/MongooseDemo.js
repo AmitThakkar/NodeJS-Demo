@@ -7,7 +7,15 @@
     var mongoose = require('mongoose');
 
     // Connect with MongoDB server
-    mongoose.connect('mongodb://localhost/test');
+    mongoose.connect('mongodb://localhost/mongoTest');
+    var db = mongoose.connection;
+    db.on('error', function (error) {
+        console.log('Error: ', error.message);
+    });
+    db.once('open', function () {
+        console.log('MongoDB connected!');
+    });
+
     // Define Schema for Collection.
     var User = mongoose.model('User', {fname: String, lname: String});
 
