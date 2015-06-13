@@ -12,6 +12,5 @@
     employeeSchema.findOneById = function (id, callback) {
         this.findOne({_id: ObjectId(id)}, callback);
     };
-    var Employee = mongoose.model('Employee', employeeSchema);
-    module.exports = Employee;
+    module.exports = mongoose.model('Employee', employeeSchema);
 })(require, module);

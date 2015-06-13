@@ -4,12 +4,12 @@
 (function (require) {
     var express = require('express');
     var app = express();
+    var bodyParser = require('body-parser');
     var mongoose = require('mongoose');
     var winston = require('winston');
     winston.level = 'silly';
 
     var mongoURL = 'mongodb://localhost/test';
-    // Connect with MongoDB server
     mongoose.connect(mongoURL);
     var db = mongoose.connection;
     db.on('error', function (error) {
@@ -18,12 +18,13 @@
     db.once('open', function () {
         winston.info('Connected with mongodb on ', mongoURL);
     });
+    app.use(bodyParser.json());
     app.use(function (req, res, next) {
-        console.log("Request: ", req.url);
+        winston.silly("Request: ", req.url);
         next();
     });
     require('./routeMapping')(app);
     var server = app.listen(3000, function () {
-        console.log('TODO app listening at http://localhost:' + server.address().port);
+        winston.info('TODO app listening at http://localhost:' + server.address().port);
     });
 })(require);

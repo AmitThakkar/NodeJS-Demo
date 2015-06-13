@@ -5,9 +5,9 @@
     var EmployeeController = require('./employee.controller');
     module.exports = function (app) {
         app.get('/employee/:id', EmployeeController.get);
-        app.get('/employee', EmployeeController.list);
+        //app.get('/employee', EmployeeController.list);
         app.post('/employee', EmployeeController.save);
-        app.put('/employee', EmployeeController.update);
-        app.delete('/employee', EmployeeController.remove);
+        //app.put('/employee', EmployeeController.update);
+        //app.delete('/employee', EmployeeController.remove);
     };
 })(module, require);
