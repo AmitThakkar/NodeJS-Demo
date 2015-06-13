@@ -16,12 +16,12 @@
     winston.error('6th Level');
 
     var mongoURL = 'mongodb://localhost/test';
-    mongoose.connect(mongoURL, function (error) {
-        if (error) {
-            winston.error(error);
-        } else {
-            winston.info('Connected with mongodb on ', mongoURL);
-        }
+    var db = mongoose.connection;
+    db.on('error', function (error) {
+        winston.error(error.message);
+    });
+    db.once('open', function () {
+        winston.info('Connected with mongodb on ', mongoURL);
     });
     // Define Schema for Collection.
     var User = mongoose.model('User', {fname: String, lname: String});
