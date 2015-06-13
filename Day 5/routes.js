@@ -1,7 +1,7 @@
 /**
  * Created by Amit Thakkar on 25/05/15.
  */
-(function () {
+(function (module) {
     module.exports = function (app) {
         app.get('/hello', function (req, res) {
             res.send("Hello World");
@@ -10,4 +10,4 @@
             res.send("This is me");
         });
     };
-})();
+})(module);

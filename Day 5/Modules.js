@@ -8,8 +8,6 @@
         console.log("Request: ", req.url);
         next();
     });
-    app.use(express.static('public'));
-    app.use(express.static('node_modules'));
     require('./routes')(app);
     var server = app.listen(3000, function () {
         console.log('TODO app listening at http://localhost:' + server.address().port);
