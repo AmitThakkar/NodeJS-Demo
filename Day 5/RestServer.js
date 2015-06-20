@@ -4,7 +4,7 @@
 (function (require) {
     var express = require('express');
     var app = express();
-    var bodyParser = require('body-parser');
+    var bodyParser = require('body-parser');  // for reading POSTed form data into `req.body`
     var mongoose = require('mongoose');
     var winston = require('winston');
     winston.level = 'silly';
