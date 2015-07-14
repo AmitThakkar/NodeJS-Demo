@@ -8,4 +8,5 @@
         if (err) throw err;
         console.log('successfully deleted test');
     });
+    console.log("After File Delete.");
 })(require);

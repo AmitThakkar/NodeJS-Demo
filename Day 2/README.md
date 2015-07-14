@@ -9,6 +9,6 @@
 > In Browsers we have **window** as global object, while in NodeJS, **global** is global object.
 * Command Line Arguments.
 * Command Line Environment Variables.
-* NPM
-* External Node Modules(Package.json- npm init)
+* NPM(Package.json- npm init)
+* External Node Modules
     * lodash

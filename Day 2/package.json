@@ -2,7 +2,7 @@
   "name": "Day-2",
   "version": "0.0.1",
   "description": "This repository contains demos for understanding the NodeJS Day 2.",
-  "main": "ExpressServer.js",
+  "main": "Arguments.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -11,9 +11,9 @@
     "url": "https://github.com/AmitThakkar/JavaScript-at-Backend-NodeJS"
   },
   "keywords": [
-    "lodash",
     "NPM",
-    "NodeJS"
+    "NodeJS",
+    "lodash"
   ],
   "author": "Amit Thakkar",
   "license": "ISC",
@@ -22,6 +22,6 @@
   },
   "homepage": "https://github.com/AmitThakkar/JavaScript-at-Backend-NodeJS",
   "dependencies": {
-    "lodash": "^3.9.1"
+    "lodash": "^3.10.0"
   }
 }
